@@ -1,0 +1,21 @@
+package MONEYCONTROL.com.moneycontrol;
+
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+
+{  @Parameters("browser")
+	@Test
+    public void setUPBrowser(String browser)
+    {
+        System.out.println( "Hello World!" );
+        SeleniumC c=new SeleniumC();
+        c.browsersetUp("https://www.moneycontrol.com/",browser);
+       // browsersetUp()
+    }
+}

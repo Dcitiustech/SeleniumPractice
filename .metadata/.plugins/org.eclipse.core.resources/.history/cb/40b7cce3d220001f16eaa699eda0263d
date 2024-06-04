@@ -1,0 +1,35 @@
+package MONEYCONTROL.com.moneycontrol;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
+
+public class ScriptClass extends BaseTestClass{
+	WebElement ele;
+	
+	@Test
+	public void UserAccessibility() throws InterruptedException
+	{
+		Thread.sleep(15000);
+		List<WebElement> lst= driver.findElements(By.xpath("//Table[@class='rhsglTbl']//tbody//tr"));
+		int length=lst.size();
+		System.out.println(length);
+		for(int i=1;i<=length;i++)
+		{
+			 ele= driver.findElement(By.xpath("//Table[@class='rhsglTbl']//tbody//tr//td//a['"+i+"']"));
+			 String str1=ele.getText();
+			 if(str1.contains("BSE Sensex"))
+			 {
+				 driver.findElement(By.xpath("//Table[@class='rhsglTbl']//tbody//tr//td//a['"+i+"']")).click();
+			 }
+			
+		}
+		System.out.println(ele.getText());
+	}
+	
+
+}

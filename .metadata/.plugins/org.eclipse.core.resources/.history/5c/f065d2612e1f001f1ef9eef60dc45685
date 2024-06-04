@@ -1,0 +1,39 @@
+package MONEYCONTROL.com.moneycontrol;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class SeleniumC {
+public static WebDriver driver;
+@Parameters("browser")
+	@Test
+public void browsersetUp(String browser)
+{
+	String path=System.getProperty("user.dir");
+	
+	/*
+	 * ChromeOptions chromeOptions = new ChromeOptions();
+	 * chromeOptions.addArguments("--whitelist-ip *");
+	 * chromeOptions.addArguments("--proxy-server='direct://'");
+	 * chromeOptions.addArguments("--proxy-bypass-list=*"); driver=new
+	 * ChromeDriver(chromeOptions);
+	 */
+	if (browser.equalsIgnoreCase("chrome"))
+	{
+		System.setProperty("Webdriver.chrome.driver",path+"//resources//chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.manage().window().maximize();
+	}
+	else if(browser.equalsIgnoreCase("firefox"))
+	{
+		System.setProperty("Webdriver.gecko.driver",path+"//resources//geckodriver.exe");
+		driver=new FirefoxDriver();
+		driver.get("https://www.moneycontrol.com/");
+		driver.manage().window().maximize();
+	}
+}
+}

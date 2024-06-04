@@ -1,0 +1,19 @@
+package com.seleniumconcepts.SELENIUMCONCEPT;
+
+
+import org.junit.Test;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest extends BaseTestClass
+{
+   @Test
+    public void findMaxValueinWebtable()
+    {
+    	
+    }
+    {
+       
+    }
+}

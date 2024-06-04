@@ -1,0 +1,24 @@
+package MONEYCONTROL.com.moneycontrol;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class ScriptClassA  {
+	public static WebDriver driver;
+	
+	@Test
+	public void getMaxvalueWebTable()
+	{
+		String path=System.getProperty("user.dir");
+	   driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
+	   System.setProperty("Webdriver.chrome.driver",path+"//resources//chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("https://demo.guru99.com/test/web-table-element.php");
+		driver.manage().window().maximize();
+	}
+
+}

@@ -1,0 +1,14 @@
+package MONEYCONTROL.com.moneycontrol;
+
+import org.testng.annotations.Test;
+
+public class ScriptClass extends BaseTestClass{
+	
+	@Test
+	public void UserAccessibility()
+	{
+		
+	}
+	
+
+}

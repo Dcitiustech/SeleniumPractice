@@ -1,0 +1,16 @@
+package MONEYCONTROL.com.moneycontrol;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SeleniumC {
+WebDriver driver;
+
+public void browsersetUp()
+{
+	String path=System.getProperty("user.dir");
+	System.setProperty("Webdriver.chrome.driver",path+ "//resources//chromedriver.exe");
+	driver=new ChromeDriver();
+	driver.get("Moneycontrol.com");
+}
+}

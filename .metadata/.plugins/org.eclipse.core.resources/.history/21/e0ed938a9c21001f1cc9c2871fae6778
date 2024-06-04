@@ -1,0 +1,13 @@
+package com.seleniumconcepts.SELENIUMCONCEPT;
+
+import org.testng.annotations.Test;
+
+public class DynamicWebtable extends BaseTestClass{
+	
+	@Test
+    public void findMaxValueinWebtable()
+    {
+    	
+    }
+
+}

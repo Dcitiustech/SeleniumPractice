@@ -1,0 +1,15 @@
+package com.seleniumconcepts.SELENIUMCONCEPT;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+
+public class BaseTestClass {
+	public static WebDriver driver;
+	
+	@BeforeMethod
+	public void browserSetUp() {
+		
+		System.setProperty("Webdriver.Chrome.driver", "")
+	}
+
+}

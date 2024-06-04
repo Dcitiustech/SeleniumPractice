@@ -1,0 +1,22 @@
+package com.seleniumconcepts.SELENIUMCONCEPT;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+public class DynamicWebtable extends BaseTestClass{
+	
+	@Test
+    public void findMaxValueinWebtable()
+    {
+       WebElement table= driver.findElement(By.className("dataTable"));
+     List<WebElement> lst_rows=  table.findElements(By.xpath("//tr"));
+      List<WebElement> lst_columns=table.findElements(By.xpath("//tr//th"));
+     int row_size=lst_rows.size();
+     int col_size= lst_columns.size();
+     System.out.println("row size is: "+row_size+"column size is :"+col_size);
+    }
+
+}

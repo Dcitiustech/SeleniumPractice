@@ -1,0 +1,6 @@
+package com.seleniumconcepts.SELENIUMCONCEPT;
+
+public class DynamicWebTableMoneyControl extends BaseTestClass {
+	
+
+}
